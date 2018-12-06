@@ -10,5 +10,6 @@
 *.sqlite3
 *.pyc 
 *.ini
+*.coveragerc
 
 # End of https://www.gitignore.io/api/database
