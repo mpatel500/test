@@ -18,3 +18,6 @@ python manage.py runserver
 To close virtual enviornment:
 deactivate 
 
+To populate Webserver with objects:
+cd inventoryproject 
+python manage.py shell < sample_data.py
