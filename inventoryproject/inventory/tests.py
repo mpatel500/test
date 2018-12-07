@@ -13,3 +13,11 @@ class Test_Webserver_Model:
         assert webserver.vendor == "Apache"
         assert webserver.patch_level == "Q2-2016"
         assert webserver.in_use == False
+
+class Test_All_Webservers_View:
+
+    def test_all_wevserver_view_gives_200_response_code(self):
+        self.factory = RequestFactory()
+        self.request = self.factory.get(path='webservers/')
+        self.response = AllWebservers.as_view()(self.request)
+        assert self.response.status_code == 200
