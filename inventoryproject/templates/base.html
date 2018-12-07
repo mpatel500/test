@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+
+        <title> Itinerary </title>
+        {% load staticfiles %}
+        <link href="{% static '/styles.css' %}" rel="stylesheet">
+    
+    <!--   <link href="../static/styles.css" rel='stylesheet'> -->
+   
+    </head>
+    
+     <h1> Inventory </h1> 
+        
+    <body> 
+        {% block content %}
+
+
+        {% endblock %} 
+    </body>
+    
+     <footer class="text-muted" style="position: static">
+          <div class="container">
+            <p class="float-right">
+              <a href="#">Back to top</a>
+            </p>
+          </div>
+    </footer>
+
+</html>
