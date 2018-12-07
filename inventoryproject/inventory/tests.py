@@ -12,7 +12,7 @@ class Test_Webserver_Model:
         assert webserver.name == "webserver_1"
         assert webserver.vendor == "Apache"
         assert webserver.patch_level == "Q2-2016"
-<<<<<<< HEAD
+        assert webserver.in_use == False 
 
 
 class Test_All_Webservers_View:
@@ -24,6 +24,4 @@ class Test_All_Webservers_View:
         assert self.response.status_code == 200
 
 
-=======
-        assert webserver.in_use == False 
->>>>>>> 41103f44f5834fba23c2ac2f9e9eb42266a93d2a
+       
