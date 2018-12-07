@@ -37,3 +37,5 @@ class WebserverData:
             release_year +=1  
 
 
+wb = WebserverData()
+wb.create_webserver_objects()

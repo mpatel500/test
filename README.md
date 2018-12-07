@@ -12,7 +12,7 @@ python manage.py make migrations
 To migrate:
 python manage.py migrate 
 
-To Run the server: 
+To run the server: 
 python manage.py runserver 
 
 To close virtual enviornment:

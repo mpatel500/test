@@ -1,0 +1,26 @@
+html{
+    font-family: sans-serif;   
+}
+
+h1{
+    color: white;
+    background-color: black;
+    font-size: 70px;
+    margin: auto;
+    text-align: center;
+    padding: 2%;
+}
+
+#items{
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 5%; 
+    padding:2.5%;
+}
+
+#producttitle{
+    font-size: 40px;
+}
+
+
+

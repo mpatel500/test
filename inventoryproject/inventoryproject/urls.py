@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from inventory.views import AllWebservers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('webservers/', AllWebservers.as_view(), name ='all-webservers')
 ]
 urlpatterns += staticfiles_urlpatterns()
