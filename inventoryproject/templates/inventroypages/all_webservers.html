@@ -1,24 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    
     <div class='items'>
         <div class='rows'>
             {% for w in webservers%}           
             <div id='items'>
-                <a id='producttitle'>Product Title</a>
+                <a id='producttitle'>{{w.name}}</a>
                 </br>
                 </br>
-                <a> Item ID: {{w.name}}</a> </br> 
+                <a> Item ID: {{w.id}}</a> </br> 
                     Vendor:  {{w.vendor}}</br>
                     Patch Level: {{w.patch_level}} </br>
                     In use: {{w.in_use}}  </br>
                 </p>
+            </div>    
             {% endfor %}
-                
-            </div>
         </div>
-        
     </div>
-        
 {% endblock %}
