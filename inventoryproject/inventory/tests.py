@@ -1,6 +1,8 @@
 import pytest 
 from inventory.models import Webserver
+from inventory.views import AllWebservers
 import unittest
+from django.test import RequestFactory
 
 class Test_Webserver_Model:
 
@@ -10,3 +12,14 @@ class Test_Webserver_Model:
         assert webserver.name == "webserver_1"
         assert webserver.vendor == "Apache"
         assert webserver.patch_level == "Q2-2016"
+
+
+class Test_All_Webservers_View:
+
+    def test_all_wevserver_view_gives_200_response_code(self):
+        self.factory = RequestFactory()
+        self.request = self.factory.get(path='webservers/')
+        self.response = AllWebservers.as_view()(self.request)
+        assert self.response.status_code == 200
+
+
