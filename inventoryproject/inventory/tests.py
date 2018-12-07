@@ -25,6 +25,7 @@ class TestDatabaseModel:
         assert database.in_use == False
 
 class TestHostModel:
+    
     @pytest.mark.django_db
     def test_host_data_is_saved(self):
         host = Host.objects.create(fqdn="host0.jpmchase.net", os_type="Redhat", os_patch_level="Q1-2017", environment="Production")
@@ -36,6 +37,7 @@ class TestHostModel:
 
 class TestAllWebserversView:
 
+    @pytest.mark.django_db
     def test_all_wevserver_view_gives_200_response_code(self):
         self.factory = RequestFactory()
         self.request = self.factory.get(path='webservers/')
