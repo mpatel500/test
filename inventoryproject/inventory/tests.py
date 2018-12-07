@@ -10,4 +10,4 @@ class Test_Webserver_Model:
         assert webserver.name == "webserver_1"
         assert webserver.vendor == "Apache"
         assert webserver.patch_level == "Q2-2016"
-        assert webserver.in_use == False 
+        assert webserver.in_use == False
