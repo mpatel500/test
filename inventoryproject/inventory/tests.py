@@ -36,12 +36,8 @@ class TestHostModel:
 
 class TestAllWebserversView:
 
-    @pytest.mark.django_db
     def test_all_wevserver_view_gives_200_response_code(self):
         self.factory = RequestFactory()
         self.request = self.factory.get(path='webservers/')
         self.response = AllWebservers.as_view()(self.request)
         assert self.response.status_code == 200
-
-
-       
