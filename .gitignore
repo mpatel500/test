@@ -11,6 +11,8 @@
 *.pyc 
 *.ini
 *.coveragerc
+*.png
+*.coverage
 
 # End of https://www.gitignore.io/api/database
 
