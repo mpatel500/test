@@ -24,3 +24,10 @@ class Test_Sample_Data:
         num_of_objects = Webserver.objects.all()
         assert num_of_objects == 20 
 
+class Test_All_Webservers_View:
+
+    def test_all_wevserver_view_gives_200_response_code(self):
+        self.factory = RequestFactory()
+        self.request = self.factory.get(path='webservers/')
+        self.response = AllWebservers.as_view()(self.request)
+        assert self.response.status_code == 200
