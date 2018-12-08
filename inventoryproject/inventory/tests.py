@@ -14,7 +14,6 @@ class TestWebserverModel:
         assert webserver.patch_level == "Q2-2016"
         assert webserver.in_use == False 
 
-<<<<<<< HEAD
 
 class Test_Sample_Data:
 
@@ -25,10 +24,7 @@ class Test_Sample_Data:
         num_of_objects = Webserver.objects.all()
         assert num_of_objects == 20 
 
-class Test_All_Webservers_View:
-=======
 class TestDatabaseModel:
->>>>>>> 550bff88593a469b0f65cca3d9992180bd777573
 
     @pytest.mark.django_db
     def test_database_data_is_saved(self):
