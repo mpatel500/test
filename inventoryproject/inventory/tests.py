@@ -1,9 +1,8 @@
 import pytest 
-from inventory.models import Webserver, Database, Host
+from inventory.models import Webserver, Database, Host, HostApplications
 from inventory.views import AllWebservers
 import unittest
 from django.test import RequestFactory
-from sample_data import WebserverData
 
 class TestWebserverModel:
 
@@ -14,16 +13,6 @@ class TestWebserverModel:
         assert webserver.vendor == "Apache"
         assert webserver.patch_level == "Q2-2016"
         assert webserver.in_use == False 
-
-
-class Test_Sample_Data:
-
-    @pytest.mark.django_db(transaction=True)
-    def test_twenty_webserver_objects_are_saved(self):
-        wd = WebserverData()
-        wd.create_webserver_objects()
-        num_of_objects = Webserver.objects.all()
-        assert num_of_objects == 20 
 
 class TestDatabaseModel:
 
@@ -45,6 +34,14 @@ class TestHostModel:
         assert host.os_patch_level == "Q1-2017"
         assert host.environment == "Production"
 
+class TestHostApplicationsModel:
+
+    @pytest.mark.django_db
+    def test_host_applications_data_is_saved(self):
+        host_a = HostApplications.objects.create(host_id=1, webserver_ids=(1,), database_ids=(1,))
+        assert host_a.host_id == 1 
+        assert host_a.webserver_ids == (1,)
+        assert host_a.database_ids == (1,)
 
 class TestAllWebserversView:
 

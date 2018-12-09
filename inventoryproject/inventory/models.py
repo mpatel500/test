@@ -20,5 +20,5 @@ class Host(models.Model):
 
 class HostApplications(models.Model):
     host_id = models.IntegerField()
-    webserver_ids = models.CharField(max_length=50,default=None)
-    database_ids = models.CharField(max_length=50,default=None)
+    webserver_ids = models.CharField(max_length=50)
+    database_ids = models.CharField(max_length=50)
