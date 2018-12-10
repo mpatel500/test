@@ -10,8 +10,8 @@ class DatabaseForm(forms.ModelForm):
         model = Database
         fields = ['name','vendor','patch_level']
 
-class Host(forms.ModelForm):
+class HostForm(forms.ModelForm):
     class Meta:
         model = Host
         fields = ['fqdn','os_type','os_patch_level','environment']
-        
+
