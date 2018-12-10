@@ -1,5 +1,6 @@
 html{
     font-family: sans-serif;   
+    margin: -0.02%;
 }
 
 h1{
@@ -10,17 +11,34 @@ h1{
     text-align: center;
     padding: 2%;
 }
-
-#items{
-    border: 2px solid black;
-    border-radius: 8px;
-    margin: 5%; 
-    padding:2.5%;
-}
-
-#producttitle{
+#table_title{
     font-size: 40px;
+    padding: 2%;
+    position: relative;
+    top: 18px;
+    left: 2%;
 }
 
+#webservers_table {
+    width: 90%;
+    text-align: center;
+    padding-top: 2%;   
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 2%; 
+}
 
+#webservers_table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
 
+th {
+    height: 60px;   
+    width: 18%;
+}
+
+td {
+    height: 35px; 
+    width: 20px; 
+}

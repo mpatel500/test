@@ -3,22 +3,24 @@
 {% block content %}
     <div class='items'>
         <div class='rows'>
-            <a id='table_title'> Webservers: </a>
+        
             <table id='webservers_table'>
                 <tr>
                     <th>Item ID</th> 
                     <th>Product Title</th>
-                    <th>Vendor</th>
-                    <th>Patch Level</th>
+                    <th>Type</th>
                     <th>In Use</th>
                 </tr>
-                {% for w in webservers%}   
+                {% for i in items %}   
                  <tr>
-                    <td>{{w.id}}</td> 
-                    <td>{{w.name}}</td>
-                    <td>{{w.vendor}}</td>
-                    <td>{{w.patch_level}}</td>
-                    <td>{{w.in_use}}</td>
+                    <td>{{i.id}}</td> 
+                    <td>{{i.name}} {{i.fqdn}}</td>
+                    <td> {{i.type}} </td>
+                    {% if i.in_use == Null %}
+                        <td>N/A</td>
+                    {% else %}    
+                        <td>{{i.in_use}}</td>                        
+                    {% endif %}
                 </tr>
                 {% endfor %}               
             </table>
