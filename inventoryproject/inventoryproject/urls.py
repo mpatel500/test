@@ -16,11 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+<<<<<<< HEAD
+from inventory.views import AllWebservers, AddWebserverView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('webservers/', AllWebservers.as_view(), name ='all_webservers'),
+    path('webservers/add_webserver', AddWebserverView.as_view(), name='add_webserver'),
+=======
 from inventory.views import AllWebservers, AllItems
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('webservers/', AllWebservers.as_view(), name ='all-webservers'),
     path('home/', AllItems.as_view(), name ='all-items')
+>>>>>>> 156fd15fb7dae9c2929daf9264cd8362f532ac7e
 ]
 urlpatterns += staticfiles_urlpatterns()
