@@ -1,6 +1,6 @@
 import pytest 
 from inventory.models import Webserver, Database, Host, HostApplications
-from inventory.views import AllWebservers
+from inventory.views import AllWebservers, AllItems
 import unittest
 from django.test import RequestFactory
 
@@ -52,11 +52,11 @@ class TestAllWebserversView:
         self.response = AllWebservers.as_view()(self.request)
         assert self.response.status_code == 200
 
-class TestIndividualWebserversView:
+class TestAllItemsView:
 
     @pytest.mark.django_db
-    def test_individual_webserver_gives_same_id(self):
+    def test_all_items_view_gives_200_response_code(self):
         self.factory = RequestFactory()
-        self.request = self.factory.get(path='webservers/4')
-        self.response = AllWebservers.as_view()(self.request)
-        assert self.response.id== 4
+        self.request = self.factory.get(path='/')
+        self.response = AllItems.as_view()(self.request)
+        assert self.response.status_code == 200
