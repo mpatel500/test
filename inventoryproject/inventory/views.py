@@ -1,13 +1,9 @@
 from django.views.generic import TemplateView
-<<<<<<< HEAD
 from django.http.response import Http404, HttpResponseRedirect
-from inventory.models import Webserver
 from inventory.form import WebserverForm
 from django.urls.base import reverse
-=======
 from django.http.response import Http404
 from inventory.models import Webserver, Database, Host
->>>>>>> 156fd15fb7dae9c2929daf9264cd8362f532ac7e
 
 class AllWebservers(TemplateView):
     template_name = 'inventorypages/all_webservers.html'
@@ -23,7 +19,6 @@ class AllWebservers(TemplateView):
         } for w in webservers
         ]
         return self.render_to_response({'webservers': response})
-<<<<<<< HEAD
 
 class AddWebserverView(TemplateView):
     template_name = 'inventorypages/add_webserver.html'
@@ -41,7 +36,6 @@ class AddWebserverView(TemplateView):
         webserver.save()
         return HttpResponseRedirect(reverse('all_webservers'))
  
-=======
     
 class AllItems(TemplateView):
     template_name = 'inventroypages/all_items.html'
@@ -76,4 +70,3 @@ class AllItems(TemplateView):
         } for i in host_items]
         
         return self.render_to_response({'items': response})
->>>>>>> 156fd15fb7dae9c2929daf9264cd8362f532ac7e
