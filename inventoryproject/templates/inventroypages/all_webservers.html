@@ -3,18 +3,27 @@
 {% block content %}
     <div class='items'>
         <div class='rows'>
-            {% for w in webservers%}           
-            <div id='items'>
-                <a id='producttitle'>{{w.name}}</a>
-                </br>
-                </br>
-                <a> Item ID: {{w.id}}</a> </br> 
-                    Vendor:  {{w.vendor}}</br>
-                    Patch Level: {{w.patch_level}} </br>
-                    In use: {{w.in_use}}  </br>
-                </p>
-            </div>    
-            {% endfor %}
+            <a id='table_title'> Webservers: </a>
+            <table id='webservers_table'>
+                <tr>
+                    <th>Item ID</th> 
+                    <th>Product Title</th>
+                    <th>Vendor</th>
+                    <th>Patch Level</th>
+                    <th>In Use</th>
+                </tr>
+                {% for w in webservers%}   
+                 <tr>
+                    <td>{{w.id}}</td> 
+                    <td>{{w.name}}</td>
+                    <td>{{w.vendor}}</td>
+                    <td>{{w.patch_level}}</td>
+                    <td>{{w.in_use}}</td>
+                </tr>
+                {% endfor %}               
+            </table>
+
+           
         </div>
     </div>
 {% endblock %}
