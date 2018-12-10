@@ -51,3 +51,12 @@ class TestAllWebserversView:
         self.request = self.factory.get(path='webservers/')
         self.response = AllWebservers.as_view()(self.request)
         assert self.response.status_code == 200
+
+class TestIndividualWebserversView:
+
+    @pytest.mark.django_db
+    def test_individual_webserver_gives_same_id(self):
+        self.factory = RequestFactory()
+        self.request = self.factory.get(path='webservers/4')
+        self.response = AllWebservers.as_view()(self.request)
+        assert self.response.id== 4
