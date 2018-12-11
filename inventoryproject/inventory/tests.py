@@ -1,6 +1,6 @@
 import pytest 
-from models import Webserver, Database, Host, HostApplications
-from views import AllWebservers, AllItems
+from inventory.models import Webserver, Database, Host, HostApplications
+from inventory.views import AllWebservers, AllItems
 import unittest
 from django.test import RequestFactory
 
