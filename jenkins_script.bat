@@ -1,3 +1,3 @@
 pip install -r requirements.txt
 cd inventoryproject
-pytest
+pytest --junit-xml=pytest_xml.xml
