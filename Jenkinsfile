@@ -6,6 +6,13 @@ pipeline {
 				git "https://github.com/mpatel500/test.git"
 				}
 			}
+		stage ('Install pip') {
+			steps {
+				sh "sudo apt-get install python-pip python-dev build-essential" 
+				sh "sudo pip install --upgrade pip" 
+				sh "sudo pip install --upgrade virtualenv"
+				}
+			}
 		stage (‘Build’) {
 			steps {
 				sh "sudo easy_install pip"
