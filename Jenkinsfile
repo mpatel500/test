@@ -8,7 +8,7 @@ pipeline {
 			}
 		stage (‘Build’) {
 			steps {
-				sh "/.jenkins_script.sh"
+				sh "./jenkins_script.sh"
 				}
 			}
 		}
