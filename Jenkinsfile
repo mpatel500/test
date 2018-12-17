@@ -10,7 +10,7 @@ pipeline {
 			steps {
 				sh "pwd"
 				sh "whoami"
-				sh "./jenkins_script.sh"
+				sh "sudo ./jenkins_script.sh"
 				}
 			}
 		}
