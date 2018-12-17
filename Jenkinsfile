@@ -8,7 +8,7 @@ pipeline {
 			}
 		stage (‘Build’) {
 			steps {
-				bat "jenkins_script.bat"
+				sh "jenkins_script.sh"
 				}
 			}
 		}
