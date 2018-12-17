@@ -1,4 +1,4 @@
-pip install -r requirements.txt
+sudo pip install -r requirements.txt
 cd inventoryproject
 python manage.py runserver
 pytest --junit-xml=pytest_xml.xml
