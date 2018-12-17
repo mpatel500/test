@@ -8,6 +8,8 @@ pipeline {
 			}
 		stage (‘Build’) {
 			steps {
+				sh "pwd"
+				sh "whoami"
 				sh "./jenkins_script.sh"
 				}
 			}
