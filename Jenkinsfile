@@ -8,6 +8,7 @@ pipeline {
 			}
 		stage (‘Build’) {
 			steps {
+				sh "sudo easy_install pip"
 				sh "pwd"
 				sh "whoami"
 				sh "sudo bash ./jenkins_script.sh"
