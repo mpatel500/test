@@ -16,7 +16,7 @@ pipeline {
 		stage ('Publish Reports') {
 			steps {
 				sh "ls"
-				junit 'coverage.xml'
+				junit 'inventoryproject/coverage.xml'
 				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'htmlcov', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 				}
 			}
