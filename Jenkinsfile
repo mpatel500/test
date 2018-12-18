@@ -13,6 +13,7 @@ pipeline {
 				sh ". env/bin/activate"
 				sh "pwd"
 				sh "whoami"
+				sh "pip freeze"
 				sh "sudo bash ./jenkins_script2.sh"
 				sh "deactivate"
 				}
