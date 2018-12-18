@@ -1,5 +1,6 @@
 #!/bin/bash
 source ./env/bin/activate
+pip freeze
 sudo -H pip install -r requirements.txt
 cd inventoryproject
 python manage.py runserver
