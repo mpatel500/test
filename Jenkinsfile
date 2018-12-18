@@ -8,6 +8,7 @@ pipeline {
 			}
 		stage (‘Build’) {
 			steps {
+				sh "pip freeze"
 				sh "python3 -m venv ./env"
 				sh ". env/bin/activate"
 				sh "pwd"
