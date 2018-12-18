@@ -13,7 +13,6 @@ pipeline {
 				sh "whoami"
 				sh "pip freeze"
 				sh "sudo bash ./jenkins_script2.sh"
-				sh "deactivate"
 				}
 			}
 		stage ('Publish Reports') {
