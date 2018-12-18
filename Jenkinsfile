@@ -13,5 +13,11 @@ pipeline {
 				sh "sudo bash ./jenkins_script2.sh"
 				}
 			}
+		stage ('Publish Reports') {
+			steps {
+				junit 'coverage.xml'
+				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'htmlcov', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+				}
+			}
 		}
 }
