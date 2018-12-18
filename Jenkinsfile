@@ -9,7 +9,7 @@ pipeline {
 		stage (‘Build’) {
 			steps {
 				sh "python3 -m venv ./env"
-				sh "source env/bin/activate"
+				sh ". source env/bin/activate"
 				sh "pwd"
 				sh "whoami"
 				sh "sudo bash ./jenkins_script2.sh"
