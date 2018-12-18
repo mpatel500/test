@@ -10,7 +10,7 @@ pipeline {
 			steps {
 				sh "pip freeze"
 				sh "python3 -m venv ./env"
-				sh ". env/bin/activate"
+				sh "./env/bin/activate"
 				sh "pwd"
 				sh "whoami"
 				sh "pip freeze"
