@@ -17,7 +17,7 @@ pipeline {
 			steps {
 				sh "ls"
 				junit 'inventoryproject/pytest_xml.xml'
-				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'htmlcov', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
+				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'inventoryproject/htmlcov', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 				}
 			}
 		}
