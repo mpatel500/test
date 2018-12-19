@@ -8,6 +8,6 @@ pip freeze
 cd inventoryproject
 #python manage.py runserver
 pytest --junit-xml=pytest_xml.xml
-
+pylint inventoryproject/inventory
 py.test --cov=inventory inventory/ --cov-report html --cov-report xml --cov-fail-under=100
 deactivate
