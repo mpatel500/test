@@ -3,5 +3,4 @@ djangorestframework
 pytest
 pytest-mock
 pytest-django
-pytest-cov
 pysqlite3
