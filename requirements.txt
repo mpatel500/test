@@ -6,3 +6,4 @@ pytest-mock
 pytest-django
 pysqlite3
 pylint
+pycobertura
