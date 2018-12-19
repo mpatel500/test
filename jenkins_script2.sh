@@ -9,6 +9,5 @@ cd inventoryproject
 #python manage.py runserver
 pytest --junit-xml=pytest_xml.xml
 
-py.test --cov=inventory inventory/ --cov-report html --cov-report xml
-python3 --cov-fail-under=100
+py.test --cov=inventory inventory/ --cov-report html --cov-report xml --cov-fail-under=100
 deactivate
