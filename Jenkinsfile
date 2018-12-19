@@ -24,5 +24,11 @@ pipeline {
 				sh "pycobertura show inventoryproject/coverage.xml"
 				}
 			}
+		stage ('Deploy') {
+			steps {
+				input 'Do you approve the deployment?'
+				echo 'Deploying'
+				}
+			}
 		}
 }
