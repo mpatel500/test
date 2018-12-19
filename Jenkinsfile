@@ -21,7 +21,7 @@ pipeline {
 				junit 'inventoryproject/pytest_xml.xml'
 				publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: 'inventoryproject/htmlcov', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: ''])
 				cobertura autoUpdateHealth: true, autoUpdateStability: true, coberturaReportFile: 'inventoryproject/coverage.xml', conditionalCoverageTargets: '100, 0, 0', failUnhealthy: true, failUnstable: true, lineCoverageTargets: '100, 0, 0', maxNumberOfBuilds: 0, methodCoverageTargets: '100, 0, 0', onlyStable: false, sourceEncoding: 'ASCII', zoomCoverageChart: false
-				sh "pycobertura show coverage.xml"
+				sh "pycobertura show inventoryproject/coverage.xml"
 				}
 			}
 		}
